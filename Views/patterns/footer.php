@@ -1,3 +1,3 @@
 <footer class="text-center">
-  <p> © 2022 Copyright:</p>
+  <p>Masha Sedova - 2022</p>
 </footer>

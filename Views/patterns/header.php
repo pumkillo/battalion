@@ -7,7 +7,7 @@ require_once(Middlewares::getClass('auth'));
 ?>
 <div class="header d-flex justify-content-between">
 <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <a class="nav-link" href="<?= ROOT ?><?= Router::get('main') ?>">Главная</a>
+    <a class="nav-link" href="<?= ROOT ?><?= Router::get('main') ?>"><img src="<?= ASSETS ?>static/images/logo.svg" alt="logo"></a>
     <ul class="nav justify-content-end">
         <?php
         if (!AuthMiddleware::is()) :

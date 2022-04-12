@@ -6,6 +6,7 @@ class Router
         'login' => 'login.php',
         'logout' => 'logout.php',
         'add_employee' => 'add_employee.php',
+        'edit_employee_info' => 'edit_employee_info.php',
         'add_company' => 'add_company.php',
         'add_platoon' => 'add_platoon.php',
         'add_division' => 'add_division.php',

@@ -1,32 +1,37 @@
 form {
-    max-width: 600px !important;
+  max-width: 600px !important;
 }
 
 div {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-form >div {
-    margin-bottom: 0;
+form > div {
+  margin-bottom: 0;
 }
 
-[class*='col'] > .errors,
+[class*="col"] > .errors,
 ul > div {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 footer {
-    width: 100vw;
-    background-color: #0d6dfd3a;
-    position: absolute;
-    padding: 16px;
-    bottom: 0;
+  width: 100vw;
+  background-color: #0d6dfd3a;
+  position: absolute;
+  padding: 16px;
+  bottom: 0;
 }
 
 footer > p {
-    margin: 0;
+  margin: 0;
 }
 
-td > .errors {
-    margin-bottom: 0;
+td > .errors,
+td > div {
+  margin-bottom: 0;
+}
+
+img[alt="logo"]{
+    width: 90px;
 }

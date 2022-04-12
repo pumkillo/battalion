@@ -92,7 +92,7 @@ require_once(Loader::load('messages'));
                 </div>
             </div>
             <div class="mb-3">
-                <label for="division_id" class="form-label">Номер отделения</label>
+                <label for="division_id" class="form-label">Отделение</label>
                 <?php
                 $divisions = Query::table('divisions')->all();
                 if (count($divisions) !== 0) :

@@ -56,7 +56,12 @@ require_once(Loader::load('messages'));
                             <td><?= $company['name'] ?? Messages::renderError('Не найдено') ?></td>
                             <td><?= $platoon['name'] ?? Messages::renderError('Не найдено') ?></td>
                             <td><?= $division['name'] ?? Messages::renderError('Не найдено') ?></td>
-                            <td><a href="<?= Router::get('fire') . "?id=" . $member['id'] ?>" class="btn btn-danger btn-sm">Уволить</a></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="<?= Router::get('edit_employee_info') . "?id=" . $member['id'] ?>" class="btn btn-primary btn-sm">Перевести</a>
+                                    <a href="<?= Router::get('fire') . "?id=" . $member['id'] ?>" class="btn btn-danger btn-sm">Уволить</a>
+                                </div>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 <tbody>
