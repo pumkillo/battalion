@@ -1,0 +1,32 @@
+form {
+    max-width: 600px !important;
+}
+
+div {
+    margin-bottom: 20px;
+}
+
+form >div {
+    margin-bottom: 0;
+}
+
+[class*='col'] > .errors,
+ul > div {
+    margin-bottom: 0;
+}
+
+footer {
+    width: 100vw;
+    background-color: #0d6dfd3a;
+    position: absolute;
+    padding: 16px;
+    bottom: 0;
+}
+
+footer > p {
+    margin: 0;
+}
+
+td > .errors {
+    margin-bottom: 0;
+}

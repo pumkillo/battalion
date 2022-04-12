@@ -6,6 +6,7 @@ require_once(Loader::load('router'));
 require_once(Loader::load('constants'));
 require_once(Loader::load('query'));
 require_once(Loader::load('session'));
+require_once(Loader::load('messages'));
 ?>
 
 <!DOCTYPE html>
@@ -36,23 +37,24 @@ require_once(Loader::load('session'));
         require_once(Loader::load('views') . 'patterns/header.php');
         if (!AuthMiddleware::is()) :
         ?>
-            <div class="container">
-                <form method="post" class="container" style="max-width: 500px;">
-                    <div class="mb-3">
-                        <input type="text" name="login" placeholder="Введите Ваш логин" class="form-control">
-                    </div>
+            <form method="post" class="container">
+                <div class="mb-3">
+                    <input type="text" name="login" placeholder="Введите Ваш логин" class="form-control">
+                </div>
 
-                    <div class="mb-3">
-                        <input type="password" name="password" placeholder="Введите Ваш пароль" class="form-control">
-                    </div>
-
-                    <p class="errors text-danger"><?= $message ?? '' ?></p>
-                    <input type="submit" value="Войти" class="btn btn-primary">
-                </form>
-            <?php else : ?>
-                <p>Вы уже вошли в систему.</p>
-            <?php endif; ?>
-            </div>
+                <div class="mb-3">
+                    <input type="password" name="password" placeholder="Введите Ваш пароль" class="form-control">
+                </div>
+                <?php
+                if (isset($message)) {
+                    Messages::renderError($message);
+                }
+                ?>
+                <input type="submit" value="Войти" class="btn btn-primary">
+            </form>
+        <?php else : ?>
+            <p>Вы уже вошли в систему.</p>
+        <?php endif; ?>
     </div>
-
+    <?php require_once(Loader::load('views') . 'patterns/footer.php'); ?>
 </body>

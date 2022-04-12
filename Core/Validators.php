@@ -6,6 +6,7 @@ class Validators
         'unique' => 'UniqueValidator',
         'russian' => 'RussianValidator',
         'min_max' => 'MinMaxValidator',
+        'birthdate' => 'BirthdateValidator',
     ];
 
     private array $errors = [];
@@ -38,7 +39,7 @@ class Validators
             if (!isset($this->validators[$validatorName])) {
                 continue;
             }
-            require_once(__DIR__ . '/../App/Validtors/' . $validatorClass . '.php');
+            require_once(__DIR__ . '/../App/Validators/' . $validatorClass . '.php');
             $validator = new $validatorClass(
                 $fieldName,
                 $this->fields[$fieldName],

@@ -23,7 +23,8 @@ class Query
 
     public function where(string $condition, string $select = "*"): array
     {
-        return $this->mysqli->query("SELECT $select  FROM " . $this->table . " WHERE $condition")->fetch_all($mode = MYSQLI_ASSOC);
+        $res = $this->mysqli->query("SELECT $select  FROM " . $this->table . " WHERE $condition");
+        return $res->fetch_all($mode = MYSQLI_ASSOC) ?? [];
     }
 
     public function all(): array

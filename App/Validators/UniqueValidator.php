@@ -7,7 +7,7 @@ class UniqueValidator extends AbstractValidator
 {
     public function rule(): bool
     {
-        return (bool)count(Query::table($this->args[0])->where($this->args[1] . " LIKE '" . $this->value . "'")) !== 0;
+        return (bool)count(Query::table($this->args[0])->where($this->args[1] . " LIKE '" . $this->value . "'")) == 0;
     }
 
     public function message(): string

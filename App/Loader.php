@@ -13,6 +13,7 @@ class Loader
         'middlewares' => __DIR__ . '/../Core/Middlewares.php',
         'session' => __DIR__ . '/../Core/Session.php',
         'db_trait' => __DIR__.'/../Core/Traits/DbTrait.php',
+        'messages' => __DIR__.'/../Views/patterns/Messages.php',
     ];
 
     public static function load(string $key, string $view = ''): string

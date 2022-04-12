@@ -5,7 +5,7 @@ class RussianValidator extends AbstractValidator
 {
     public function rule(): bool
     {
-        return (bool)preg_match('/^[а-я\s]*$/ui', $this->value);
+        return (bool)preg_match('/^([а-я\s\d\W])*$/ui', $this->value);
     }
 
     public function message(): string
